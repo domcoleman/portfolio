@@ -21,9 +21,9 @@ export default {
     linkActiveClass: 'link--active',
     linkExactActiveClass: null
   },
-  plugins: ['~/plugins/composition-api'],
+  plugins: ['~/plugins/composition-api', '~/plugins/vue-runtime'],
   buildModules: ['@nuxt/typescript-build'],
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/svg'],
   styleResources: {
     scss: ['~assets/scss/global.scss', 'include-media/dist/_include-media.scss']
   },

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "github",
+    "display": "GitHub",
+    "link": "//github.com/domcoleman",
+    "tagProps": {
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  {
+    "name": "codepen",
+    "display": "Codepen",
+    "link": "//codepen.com/dcoleman",
+    "tagProps": {
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  {
+    "name": "facebook",
+    "display": "Facebook",
+    "link": "//facebook.com/dcoleman19",
+    "tagProps": {
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "home",
+    "link": {
+      "name": "index"
+    },
+    "tagProps": {
+      "exact": true
+    },
+    "style": {
+      "--phone-order": 2,
+      "--order": 1
+    }
+  },
+  {
+    "name": "portfolio",
+    "display": "Work",
+    "style": {
+      "--phone-order": 1,
+      "--order": 2
+    }
+  },
+  {
+    "name": "contact",
+    "style": {
+      "--phone-order": 3,
+      "--order": 3
+    }
+  }
+]

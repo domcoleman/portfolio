@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.6",
     "@vue/composition-api": "^0.3.2",
     "include-media": "^1.4.9",
     "nuxt": "^2.0.0"
