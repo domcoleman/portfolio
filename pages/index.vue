@@ -1,71 +1,65 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        composition-portfolio
-      </h1>
-      <h2 class="subtitle">
-        My Web Development Portfolio
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div :class="$style.IndexPage">
+    <p :class="$style.highlight">Hi, I'm</p>
+    <h1 :class="$style.title">
+      Dom Coleman.
+    </h1>
+    <h2 :class="$style.subtitle">
+      I make things for the web.
+    </h2>
+    <p :class="$style.paragraph">
+      I'm a frontend developer based in
+      <span :class="$style.highlight">Brighton, UK</span>. I'm passionate about
+      keeping up with the latest web technologies. I've loved using
+      <span :class="$style.highlight">Vue.js</span> with my recent projects, and
+      have experience working with other frameworks, such as
+      <span :class="$style.highlight">React</span>, and
+      <span :class="$style.highlight">Svelte</span>.
+    </p>
+    <div :class="$style.navigationLinks">
+      Check out my
+      <NuxtLink :to="{ name: 'portfolio' }">recent work</NuxtLink>
+      or
+      <NuxtLink :to="{ name: 'contact' }">get in contact</NuxtLink>.
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { createComponent } from '@vue/composition-api'
-import Logo from '~/components/Logo.vue'
-
-const IndexPage = createComponent({
-  components: {
-    Logo
-  }
-})
-
-export default IndexPage
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style lang="scss" module>
+.IndexPage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  width: 100%;
+  min-height: 100%;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .title {
+    margin: 0.25rem 0;
+    color: css-property(heading-font-color);
+    font-weight: 100;
+    text-indent: 0.5rem;
+    @include fluid-type(33.1776px, 81px);
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .subtitle {
+    margin-bottom: 1.5rem;
+    color: css-property(heading-font-color);
+    font-weight: 100;
+    text-indent: 1.5rem;
+    @include fluid-type(19.2px, 54px);
+  }
 
-.links {
-  padding-top: 15px;
+  .paragraph {
+    text-align: justify;
+  }
+
+  .highlight {
+    color: css-property(secondary-accent-color);
+  }
+
+  .navigationLinks {
+    align-self: flex-end;
+    margin-top: 2.5rem;
+  }
 }
 </style>
