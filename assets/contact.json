@@ -1,0 +1,18 @@
+[
+  {
+    "platform": "email",
+    "url": "hello@domcoleman.com"
+  },
+  {
+    "platform": "github",
+    "url": "github.com/domcoleman"
+  },
+  {
+    "platform": "codepen",
+    "url": "codepen.com/dcoleman"
+  },
+  {
+    "platform": "facebook",
+    "url": "facebook.com/dcoleman19"
+  }
+]
