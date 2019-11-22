@@ -1,10 +1,10 @@
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
-    title: process.env.npm_package_name || '',
+    titleTemplate: (title) =>
+      title
+        ? `${title} - Web Development by Dom Coleman`
+        : 'Web Development by Dom Coleman',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,36 +16,13 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: [],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ],
-  /*
-   ** Nuxt.js modules
-   */
+  router: {
+    linkActiveClass: 'link--active',
+    linkExactActiveClass: null
+  },
+  plugins: ['~/plugins/composition-api'],
+  buildModules: ['@nuxt/typescript-build'],
   modules: [],
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  }
+  build: {}
 }

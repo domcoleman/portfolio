@@ -24,14 +24,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { createComponent } from '@vue/composition-api'
 import Logo from '~/components/Logo.vue'
 
-export default {
+const IndexPage = createComponent({
   components: {
     Logo
   }
-}
+})
+
+export default IndexPage
 </script>
 
 <style>
