@@ -1,0 +1,33 @@
+$color-scheme-dark: (
+  heading-font-color: $white,
+  primary-background-color: $diesel,
+  primary-letter-spacing: 0.1em,
+  primary-font-color: rgba($geyser, 0.85),
+  primary-accent-color: $cerise,
+  primary-accent-color-hover: $golden-fizz,
+  secondary-accent-color: $cerise,
+  active-link-color: $green-yellow,
+  card-background-color: rgba($cod-gray, 0.9),
+  tag-label-background-color: $jazzberry-jam,
+  tag-label-color: $inch-worm,
+  navigation-background-color: rgba($diesel, 0.95),
+  footer-color: rgba($mischka, 0.35)
+);
+
+// Temporary
+$color-scheme-light: $color-scheme-dark;
+
+$color-scheme: $color-scheme-dark;
+
+@function css-property($value) {
+  @if not map-has-key($color-scheme, $value) {
+    @warn "`#{$value}` does not exist in $color-scheme.";
+  }
+  @return var(--#{$value}, map-get($color-scheme, $value));
+}
+
+@mixin map-color-scheme($color-scheme-name) {
+  @each $property, $value in $color-scheme-name {
+    --#{$property}: #{$value};
+  }
+}

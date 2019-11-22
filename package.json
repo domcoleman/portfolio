@@ -12,7 +12,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "@vue/composition-api": "^0.3.2",
+    "include-media": "^1.4.9",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

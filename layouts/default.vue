@@ -1,55 +1,58 @@
 <template>
-  <div>
-    <nuxt />
+  <div
+    :class="[
+      $style.DefaultLayout,
+      isDarkMode ? $style.darkMode : $style.lightMode
+    ]"
+  >
+    <div :class="$style.wrapper">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script lang="ts">
+import { createComponent } from '@vue/composition-api'
+import useMatchMedia from '~/compositions/useMatchMedia'
+
+const DefaultLayout = createComponent({
+  setup() {
+    const isDarkMode = useMatchMedia('(prefers-color-scheme: dark)')
+
+    return {
+      isDarkMode
+    }
+  }
+})
+
+export default DefaultLayout
+</script>
+
+<style lang="scss" module>
+.lightMode {
+  @include map-color-scheme($color-scheme-light);
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+.darkMode {
+  @include map-color-scheme($color-scheme-dark);
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+.DefaultLayout {
+  width: 100%;
+  min-height: 100vh;
+  color: css-property(primary-font-color);
+  letter-spacing: css-property(primary-letter-spacing);
+  background-color: css-property(primary-background-color);
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  :global(a) {
+    color: css-property(primary-accent-color);
+    transition: color 0.3s ease-in-out;
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
 }
 </style>

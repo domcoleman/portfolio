@@ -16,13 +16,29 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  css: [],
+  css: ['~assets/scss/style.scss', '~assets/scss/fonts.scss'],
   router: {
     linkActiveClass: 'link--active',
     linkExactActiveClass: null
   },
   plugins: ['~/plugins/composition-api'],
   buildModules: ['@nuxt/typescript-build'],
-  modules: [],
-  build: {}
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: ['~assets/scss/global.scss', 'include-media/dist/_include-media.scss']
+  },
+  build: {
+    extend(config, { isDev }) {
+      // =======================================================================
+      // rename css classes
+      const moduleCssLoader = config.module.rules
+        .find((rule) => rule.test.toString() === '/\\.css$/i')
+        .oneOf.find((rule) => rule.resourceQuery.toString() === '/module/')
+        .use.find((rule) => rule.loader === 'css-loader')
+
+      moduleCssLoader.options.modules.localIdentName = isDev
+        ? '[path][name]__[local]'
+        : '[hash:base64:8]'
+    }
+  }
 }

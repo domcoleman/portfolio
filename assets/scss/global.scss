@@ -1,0 +1,25 @@
+@import './includes/colors';
+@import './includes/color-schemes';
+@import './includes/fluid-type';
+
+$min-content-width: 850px;
+$max-content-width: 1260px;
+$min-font-size: 16px;
+$max-font-size: 20px;
+
+$media-expressions: (
+  'landscape-handheld': '(orientation: landscape) and (max-height: 599px)',
+  'landscape-desktop': '(orientation: landscape) and (min-height: 600px) and (min-width: #{$min-content-width})'
+);
+
+$breakpoints: (
+  'nav-cutoff': $min-content-width,
+  'max-width': ($max-content-width / 9) * 10
+);
+$base-font-family: 'Raleway', Verdana, Geneva, sans-serif;
+$mono-font-family: 'Victor Mono', Monaco, monospace;
+
+$internal-navigation-size: 6rem;
+$internal-navigation-icon-size: 4rem;
+$external-navigation-size: 3rem;
+$external-navigation-icon-size: 1.5rem;

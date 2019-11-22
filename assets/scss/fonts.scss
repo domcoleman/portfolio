@@ -1,0 +1,31 @@
+/* raleway-regular - latin */
+@font-face {
+  font-weight: 100;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-display: swap;
+  src: local('Raleway Thin'), local('Raleway-Thin'),
+       url('/fonts/raleway-v14-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/raleway-v14-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* raleway-regular - latin */
+@font-face {
+  font-weight: 400;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'),
+       url('/fonts/raleway-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/raleway-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* victor-mono - latin */
+@font-face {
+  font-weight: 300;
+  font-family: 'Victor Mono';
+  font-style: normal;
+  font-display: swap;
+  src: local('Victor Mono Light'), local('VictorMono-Light'),
+       url('/fonts/VictorMono-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/VictorMono-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

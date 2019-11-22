@@ -1,0 +1,15 @@
+@import './vendor/reset.scss';
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font: $min-font-size $base-font-family;
+  cursor: default;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
