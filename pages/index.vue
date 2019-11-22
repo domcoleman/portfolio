@@ -16,12 +16,6 @@
       <span :class="$style.highlight">React</span>, and
       <span :class="$style.highlight">Svelte</span>.
     </p>
-    <div :class="$style.navigationLinks">
-      Check out my
-      <NuxtLink :to="{ name: 'portfolio' }">recent work</NuxtLink>
-      or
-      <NuxtLink :to="{ name: 'contact' }">get in contact</NuxtLink>.
-    </div>
   </div>
 </template>
 
@@ -55,11 +49,6 @@
 
   .highlight {
     color: css-property(secondary-accent-color);
-  }
-
-  .navigationLinks {
-    align-self: flex-end;
-    margin-top: 2.5rem;
   }
 }
 </style>
