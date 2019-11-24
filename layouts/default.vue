@@ -176,7 +176,7 @@ export default DefaultLayout
       width: var(--navigation-width);
       height: var(--navigation-height);
       margin: 0 auto;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
     }
   }
 
@@ -253,6 +253,10 @@ export default DefaultLayout
         li:first-of-type {
           margin-left: auto;
         }
+      }
+
+      .navigation {
+        padding: 0.75rem 0;
       }
     }
   }
