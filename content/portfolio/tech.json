@@ -22,5 +22,17 @@
   {
     "name": "SCSS",
     "url": "//sass-lang.com"
+  },
+  {
+    "name": "React",
+    "url": "//reactjs.org"
+  },
+  {
+    "name": "GatsbyJS",
+    "url": "//gatsbyjs.org"
+  },
+  {
+    "name": "netlify CMS",
+    "url": "//netlifycms.org"
   }
 ]

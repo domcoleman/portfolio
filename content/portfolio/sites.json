@@ -19,5 +19,14 @@
       "The frontend is a Nuxt.js app that is statically generated and hosted on Netlify.",
       "The data for the app is stored in a PostgresQL database, with the Hasura GraphQL Engine being used to create an API."
     ]
+  },
+  {
+    "slug": "junkstreet",
+    "title": "Junk Street",
+    "tech": ["React", "GatsbyJS", "Netlify CMS"],
+    "description": [
+      "Junk Street Vegan Eats are a popup serving the south east of the UK. I'm a huge fan of their burgers so being asked to work on this for them was awesome.",
+      "I used GatsbyJS to create the website, with Netlify CMS being used to keep the menu and upcoming events up to date."
+    ]
   }
 ]
