@@ -265,4 +265,16 @@ export default DefaultLayout
     --content-width: #{$max-content-width};
   }
 }
+
+:global(.fade-page) {
+  &-enter-active,
+  &-leave-active {
+    transition: 0.25s cubic-bezier(0.59, 0.12, 0.34, 0.95);
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+}
 </style>

@@ -21,6 +21,7 @@ export default {
     linkActiveClass: 'link--active',
     linkExactActiveClass: null
   },
+  pageTransition: 'fade-page',
   plugins: ['~/plugins/composition-api', '~/plugins/vue-runtime'],
   buildModules: ['@nuxt/typescript-build'],
   modules: ['@nuxtjs/style-resources', '@nuxtjs/svg'],
