@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Vue.js",
+    "url": "//vuejs.org"
+  },
+  {
+    "name": "Nuxt.js",
+    "url": "//nuxtjs.org"
+  },
+  {
+    "name": "PostgreSQL",
+    "url": "//postgresql.org"
+  },
+  {
+    "name": "GraphQL",
+    "url": "//graphql.org"
+  },
+  {
+    "name": "Liquid",
+    "url": "//shopify.github.io/liquid/"
+  },
+  {
+    "name": "SCSS",
+    "url": "//sass-lang.com"
+  }
+]
