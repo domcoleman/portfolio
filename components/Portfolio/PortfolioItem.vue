@@ -119,6 +119,7 @@ export default PortfolioItem
   display: grid;
   grid-template-rows: minmax(150px, 1fr) repeat(4, auto);
   grid-template-columns: 1;
+  margin-bottom: 1.25rem;
   text-align: justify;
   border-radius: 0.25rem;
 
@@ -163,7 +164,6 @@ export default PortfolioItem
     flex-wrap: wrap;
     grid-row-start: calc(var(--info-box-row-start) + 2);
     grid-column: var(--info-box-column-start) / var(--info-box-column-end);
-    gap: 0.5rem;
     padding: 0.5rem 1rem;
   }
 
@@ -171,10 +171,10 @@ export default PortfolioItem
     z-index: 3;
     grid-row-start: calc(var(--info-box-row-start) + 3);
     grid-column: var(--info-box-column-start) / var(--info-box-column-end);
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 0.5rem;
 
     p {
-      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 

@@ -45,9 +45,10 @@ export default ContactLink
 
 <style lang="scss" module>
 .ContactLink {
+  margin: 0.1875rem;
+
   .link {
     display: flex;
-    gap: 0.675rem;
     align-items: center;
     text-decoration: none;
 
@@ -57,8 +58,9 @@ export default ContactLink
   }
 
   .platformIcon {
-    max-width: 2rem;
+    width: 2rem;
     max-height: 2rem;
+    margin: 0.3375rem;
     fill: currentColor;
   }
 }

@@ -69,11 +69,11 @@ export default NavigationItem
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
+  margin: 0 0.5rem;
 
   .link {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     align-items: center;
     color: css-property(navigation-link-color);
     font-size: 16px;
@@ -100,12 +100,13 @@ export default NavigationItem
 
   .linkText {
     display: var(--link-text-display, block);
+    margin-top: 0.5rem;
     font-size: 0.875rem;
     visibility: var(--link-text-visibility, visible);
   }
 
   .linkIcon {
-    max-width: var(--icon-size);
+    width: var(--icon-size);
     max-height: var(--icon-size);
     fill: none;
     stroke: currentColor;
@@ -120,6 +121,7 @@ export default NavigationItem
   @include media('landscape-handheld') {
     order: var(--order, initial);
     height: auto;
+    margin: 0.5rem 0;
   }
 
   @include media('landscape-desktop') {
@@ -130,6 +132,7 @@ export default NavigationItem
     }
 
     .linkText {
+      margin-left: 0.5rem;
       padding-bottom: 0.5rem;
     }
   }

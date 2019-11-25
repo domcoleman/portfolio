@@ -40,6 +40,7 @@ export default TagLabel
 
 <style lang="scss" module>
 .TagLabel {
+  margin: 0 0.25rem 0.25rem;
   color: css-property(tag-label-color);
   font-size: 0.75rem;
   background-color: css-property(tag-label-background-color);

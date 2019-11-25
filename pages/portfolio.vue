@@ -60,12 +60,12 @@ export default PortfolioPage
 .PortfolioPage {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   justify-content: center;
   width: 100%;
   min-height: 100%;
 
   .title {
+    margin-bottom: 0.75rem;
     color: css-property(heading-font-color);
     font-weight: 100;
     text-indent: 0.5rem;
@@ -75,7 +75,6 @@ export default PortfolioPage
   .portfolioList {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
   }
 }
 </style>

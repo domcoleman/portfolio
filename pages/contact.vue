@@ -38,12 +38,12 @@ export default ContactPage
 .ContactPage {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   justify-content: center;
   width: 100%;
   min-height: 100%;
 
   .title {
+    margin-bottom: 0.75rem;
     color: css-property(heading-font-color);
     font-weight: 100;
     text-indent: 0.5rem;
@@ -51,14 +51,15 @@ export default ContactPage
   }
 
   .paragraph {
+    margin-bottom: 0.75rem;
     text-align: justify;
   }
 
   .contactLinks {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
     justify-content: space-between;
+    margin-bottom: 0.75rem;
 
     @include media('landscape-desktop') {
       justify-content: space-around;

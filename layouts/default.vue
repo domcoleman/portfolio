@@ -112,7 +112,6 @@ export default DefaultLayout
   .contentContainer {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
@@ -122,7 +121,9 @@ export default DefaultLayout
       calc(1rem + env(safe-area-inset-left, 0));
 
     .content {
+      display: flex;
       flex-grow: 1;
+      align-items: center;
       width: var(--content-width);
       margin: 0 auto;
 
@@ -133,7 +134,7 @@ export default DefaultLayout
 
     .pageFooter {
       width: var(--content-width);
-      margin: 0 auto;
+      margin: 4rem auto 0;
       color: css-property(footer-color);
       text-align: center;
 
@@ -168,7 +169,6 @@ export default DefaultLayout
 
     .navigation {
       display: flex;
-      gap: 1rem;
       align-items: center;
       justify-content: center;
       width: var(--navigation-width);
