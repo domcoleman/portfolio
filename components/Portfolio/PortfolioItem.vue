@@ -127,6 +127,7 @@ export default PortfolioItem
     grid-column: var(--image-column-start) / var(--image-column-end);
     min-width: 100%;
     max-width: 100%;
+    border: 1px solid css-property(card-border-color);
     border-radius: 0.25rem;
   }
 
@@ -135,6 +136,7 @@ export default PortfolioItem
     grid-row: var(--info-box-row-start) / var(--info-box-row-end);
     grid-column: var(--info-box-column-start) / var(--info-box-column-end);
     background-color: css-property(card-background-color);
+    border: 1px solid css-property(card-border-color);
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
   }
@@ -194,8 +196,13 @@ export default PortfolioItem
     text-align-last: right;
     border-radius: 0;
 
+    .siteImage {
+      box-shadow: 0 0 3px css-property(card-border-color);
+    }
+
     .infoBackground {
       border-radius: 0.25rem;
+      box-shadow: 0 0 6px css-property(card-border-color);
     }
 
     .siteTitle {

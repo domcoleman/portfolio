@@ -5,17 +5,35 @@ $color-scheme-dark: (
   primary-font-color: rgba($geyser, 0.85),
   primary-accent-color: $cerise,
   primary-accent-color-hover: $golden-fizz,
-  secondary-accent-color: $cerise,
-  active-link-color: $green-yellow,
   card-background-color: rgba($cod-gray, 0.9),
+  card-border-color: rgba($geyser, 0.25),
   tag-label-background-color: $jazzberry-jam,
   tag-label-color: $inch-worm,
   navigation-background-color: rgba($diesel, 0.95),
+  navigation-link-color: $cerise,
+  navigation-link-color-hover: $golden-fizz,
+  navigation-link-color-active: $green-yellow,
   footer-color: rgba($mischka, 0.35)
 );
 
 // Temporary
-$color-scheme-light: $color-scheme-dark;
+$color-scheme-light: (
+  heading-font-color: $black,
+  primary-background-color: $white,
+  primary-letter-spacing: 0.1em,
+  primary-font-color: rgba($diesel, 0.85),
+  primary-accent-color: $cerise,
+  primary-accent-color-hover: $fun-green,
+  card-background-color: rgba($alabaster, 0.9),
+  card-border-color: rgba($diesel, 0.45),
+  tag-label-background-color: $jazzberry-jam,
+  tag-label-color: $inch-worm,
+  navigation-background-color: rgba($diesel, 0.95),
+  navigation-link-color: $cerise,
+  navigation-link-color-hover: $golden-fizz,
+  navigation-link-color-active: $green-yellow,
+  footer-color: rgba($diesel, 0.35)
+);
 
 $color-scheme: $color-scheme-dark;
 

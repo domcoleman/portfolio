@@ -75,18 +75,18 @@ export default NavigationItem
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    color: css-property(primary-accent-color);
+    color: css-property(navigation-link-color);
     font-size: 16px;
     text-decoration: none;
     cursor: default;
     transition: color 0.3s ease-out;
 
     &:global(.link--active) {
-      color: css-property(active-link-color);
+      color: css-property(navigation-link-color-active);
     }
 
     &:not(:global(.link--active)):hover {
-      color: css-property(primary-accent-color-hover);
+      color: css-property(navigation-link-color-hover);
       cursor: pointer;
     }
 

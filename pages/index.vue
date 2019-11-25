@@ -48,7 +48,7 @@
   }
 
   .highlight {
-    color: css-property(secondary-accent-color);
+    color: css-property(primary-accent-color);
   }
 }
 </style>
