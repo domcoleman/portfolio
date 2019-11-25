@@ -115,6 +115,7 @@ export default DefaultLayout
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
+    padding: 1rem 1rem calc(#{$internal-navigation-size} + 1rem) 1rem;
     padding: calc(1rem + env(safe-area-inset-top, 0))
       calc(1rem + env(safe-area-inset-right, 0))
       calc(#{$internal-navigation-size} + 1rem + env(safe-area-inset-bottom, 0))
@@ -180,6 +181,8 @@ export default DefaultLayout
 
   @include media('landscape-handheld') {
     .contentContainer {
+      padding: 1rem calc(#{$internal-navigation-size} + 1rem) 1rem
+        calc(#{$external-navigation-size} + 1rem);
       padding: calc(1rem + env(safe-area-inset-top, 0))
         calc(
           #{$internal-navigation-size} + 1rem + env(safe-area-inset-right, 0)
@@ -221,6 +224,8 @@ export default DefaultLayout
     --content-width: 90vw;
 
     .contentContainer {
+      padding: calc(#{$internal-navigation-size} + 1rem) 1rem
+        calc(#{$external-navigation-size} + 1rem) 1rem;
       padding: calc(
           #{$internal-navigation-size} + 1rem + env(safe-area-inset-top, 0)
         )
