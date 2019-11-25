@@ -20,6 +20,9 @@ import { PortfolioSite, SiteImage } from '~/types/portfolio'
 import portfolioSites from '~/content/portfolio/sites.json'
 
 const PortfolioPage = createComponent({
+  head: {
+    title: 'Recent Work'
+  },
   components: {
     PortfolioItem
   },

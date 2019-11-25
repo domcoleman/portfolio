@@ -21,6 +21,9 @@ import ContactLink from '~/components/Contact/ContactLink.vue'
 import contactLinks from '~/assets/contact.json'
 
 const ContactPage = createComponent({
+  head: {
+    title: 'Contact Me'
+  },
   components: {
     ContactLink
   },
