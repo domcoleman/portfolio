@@ -24,9 +24,16 @@ export default {
   pageTransition: 'fade-page',
   plugins: ['~/plugins/composition-api', '~/plugins/vue-runtime'],
   buildModules: ['@nuxt/typescript-build'],
-  modules: ['@nuxtjs/style-resources', '@nuxtjs/svg'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/svg', 'nuxt-responsive-loader'],
   styleResources: {
     scss: ['~assets/scss/global.scss', 'include-media/dist/_include-media.scss']
+  },
+  responsiveLoader: {
+    min: 330,
+    max: 840,
+    steps: 5,
+    format: 'png',
+    adapter: require('responsive-loader/sharp')
   },
   build: {
     extend(config, { isDev }) {

@@ -2,7 +2,8 @@
   <li :class="$style.PortfolioItem">
     <img
       :class="$style.siteImage"
-      :src="coverImage"
+      :src="coverImage.src"
+      :srcset="coverImage.srcSet"
       :alt="`${title} Thumbnail`"
     />
     <div :class="$style.infoBackground" />
