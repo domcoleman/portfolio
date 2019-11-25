@@ -71,8 +71,6 @@ const DefaultLayout = createComponent({
     })
 
     return {
-      route,
-      router,
       externalLinks,
       internalLinks,
       isDarkMode
