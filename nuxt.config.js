@@ -48,5 +48,10 @@ export default {
         ? '[path][name]__[local]'
         : '[hash:base64:8]'
     }
+  },
+  generate: {
+    routes() {
+      return ['/404']
+    }
   }
 }
