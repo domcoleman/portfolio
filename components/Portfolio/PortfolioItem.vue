@@ -8,13 +8,10 @@
     />
     <div :class="$style.infoBackground" />
     <h3 :class="$style.siteTitle">{{ title }}</h3>
-    <ul v-if="hasLinks" :class="$style.siteLinks">
-      <li v-if="url">
-        <a :href="url" target="_blank" rel="noopener noreferrer">Visit Site</a>
-      </li>
-      <li v-if="sourceUrl">
-        <a :href="sourceUrl" target="_blank" rel="noopener noreferrer">
-          View Source
+    <ul v-if="links.length" :class="$style.siteLinks">
+      <li v-for="(link, index) in links" :key="`link-${index}`">
+        <a :href="link.linkUrl" target="_blank" rel="noopener noreferrer">
+          View {{ link.linkType }}
         </a>
       </li>
     </ul>
@@ -43,8 +40,7 @@ import {
   SiteSlug,
   SiteTitle,
   SiteDescription,
-  SiteURL,
-  SiteSourceURL,
+  SiteLink,
   SiteTech,
   SiteImage
 } from '~/types/portfolio'
@@ -69,13 +65,9 @@ const PortfolioItem = createComponent({
       type: Array as PropType<SiteDescription[]>,
       required: true
     },
-    url: {
-      type: String as PropType<SiteURL>,
-      default: ''
-    },
-    sourceUrl: {
-      type: String as PropType<SiteSourceURL>,
-      default: ''
+    links: {
+      type: Array as PropType<SiteLink[]>,
+      default: () => []
     },
     tech: {
       type: Array as PropType<SiteTech[]>,
@@ -87,8 +79,6 @@ const PortfolioItem = createComponent({
     }
   },
   setup(props) {
-    const hasLinks = computed(() => !!(props.url || props.sourceUrl))
-
     const coverImage = computed(() => props.images.length && props.images[0])
 
     const techList = computed(() =>
@@ -96,7 +86,6 @@ const PortfolioItem = createComponent({
     )
 
     return {
-      hasLinks,
       coverImage,
       techList
     }

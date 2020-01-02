@@ -2,22 +2,32 @@
   {
     "slug": "arabellascircus",
     "title": "Arabella's Circus",
-    "url": "//arabellascircus.com",
     "tech": ["Liquid", "SCSS", "JS"],
     "description": [
       "Arabella's Circus is a childrens toy and costume shop, selling pieces inspired by the 19th century circuses, hosted on Big Cartel.",
       "The website is a custom theme I created for the client in Shopify's Liquid templating language, with custom JavaScript to work with Big Cartel's JavaScript API in order to make the shop interactive."
+    ],
+    "links": [
+      {
+        "linkType": "Site",
+        "linkUrl": "//arabellascircus.com"
+      }
     ]
   },
   {
     "slug": "ootracker",
     "title": "OperaOmniaTracker",
-    "url": "//ootracker.com",
     "tech": ["Vue.js", "Nuxt.js", "PostgresQL", "GraphQL", "SCSS"],
     "description": [
       "OperaOmniaTracker is an ongoing personal project I created to track progress in the game, Dissidia Final Fantasy: Opera Omnia.",
       "The frontend is a Nuxt.js app that is statically generated and hosted on Netlify.",
       "The data for the app is stored in a PostgresQL database, with the Hasura GraphQL Engine being used to create an API."
+    ],
+    "links": [
+      {
+        "linkType": "Site",
+        "linkUrl": "//ootracker.com"
+      }
     ]
   },
   {
