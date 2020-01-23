@@ -12,7 +12,7 @@
       <span :class="$style.highlight">Brighton, UK</span>. I'm passionate about
       keeping up with the latest web technologies. I've loved using
       <span :class="$style.highlight">Vue.js</span> with my recent projects, and
-      have experience working with other frameworks, such as
+      have experience working with other libraries, such as
       <span :class="$style.highlight">React</span>, and
       <span :class="$style.highlight">Svelte</span>.
     </p>
