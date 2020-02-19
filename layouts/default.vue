@@ -45,6 +45,12 @@ import useRouter from '~/compositions/useRouter'
 import Navigation from '~/components/Navigation.vue'
 import externalNavigation from '~/assets/externalNavigation.json'
 import internalNavigation from '~/assets/internalNavigation.json'
+import { NavigationLink } from '~/types/navigation'
+
+const navigationSort = (navItemA: NavigationLink, navItemB: NavigationLink) =>
+  navItemA.style && navItemB.style
+    ? navItemA.style['--order'] - navItemB.style['--phone-order']
+    : 0
 
 const DefaultLayout = createComponent({
   components: {
@@ -52,7 +58,7 @@ const DefaultLayout = createComponent({
   },
   setup() {
     const externalLinks = externalNavigation
-    const internalLinks = ref(internalNavigation)
+    const internalLinks = ref(internalNavigation.sort(navigationSort))
 
     const isDarkMode = useMatchMedia('(prefers-color-scheme: dark)')
 

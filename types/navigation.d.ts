@@ -16,6 +16,6 @@ export interface NavigationLink {
   display?: NavigationLinkDisplay
   tagProps?: NavigationLinkTagProps
   style?: {
-    [key: string]: string | number
+    [key: string]: number
   }
 }
