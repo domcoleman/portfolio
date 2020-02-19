@@ -39,7 +39,7 @@
 </template>
 
 <script lang="ts">
-import { createComponent, watch, reactive } from '@vue/composition-api'
+import { createComponent, watch, ref } from '@vue/composition-api'
 import useMatchMedia from '~/compositions/useMatchMedia'
 import useRouter from '~/compositions/useRouter'
 import Navigation from '~/components/Navigation.vue'
@@ -52,21 +52,21 @@ const DefaultLayout = createComponent({
   },
   setup() {
     const externalLinks = externalNavigation
-    const internalLinks = reactive(internalNavigation)
+    const internalLinks = ref(internalNavigation)
 
     const isDarkMode = useMatchMedia('(prefers-color-scheme: dark)')
 
     const { route, router } = useRouter()
     watch(route, (newRoute) => {
-      const matchingRouteIndex = internalLinks.findIndex(
+      const matchingRouteIndex = internalLinks.value.findIndex(
         (internalLink) =>
           newRoute.name ===
           router.resolve(internalLink.link || internalLink).route.name
       )
 
       if (matchingRouteIndex > 0) {
-        const removedRoute = internalLinks.splice(matchingRouteIndex, 1)
-        internalLinks.unshift(...removedRoute)
+        const removedRoute = internalLinks.value.splice(matchingRouteIndex, 1)
+        internalLinks.value.unshift(...removedRoute)
       }
     })
 
