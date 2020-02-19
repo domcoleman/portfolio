@@ -58,6 +58,8 @@ const DefaultLayout = createComponent({
 
     const { route, router } = useRouter()
     watch(route, (newRoute) => {
+      if (!newRoute) return
+
       const matchingRouteIndex = internalLinks.value.findIndex(
         (internalLink) =>
           newRoute.name ===

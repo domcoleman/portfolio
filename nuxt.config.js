@@ -50,8 +50,6 @@ export default {
     }
   },
   generate: {
-    routes() {
-      return ['/404']
-    }
+    fallback: true
   }
 }

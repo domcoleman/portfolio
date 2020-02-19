@@ -16,7 +16,7 @@
     "@nuxtjs/svg": "^0.1.6",
     "@vue/composition-api": "^0.3.2",
     "include-media": "^1.4.9",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.11.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.3.4",

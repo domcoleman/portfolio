@@ -22,7 +22,7 @@ import contactLinks from '~/assets/contact.json'
 
 const ContactPage = createComponent({
   head: {
-    title: 'Contact Me'
+    title: 'Get in Touch'
   },
   components: {
     ContactLink
