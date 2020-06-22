@@ -34,5 +34,17 @@
   {
     "name": "Netlify CMS",
     "url": "//netlifycms.org"
+  },
+  {
+    "name": "Firebase",
+    "url": "//firebase.google.com/"
+  },
+  {
+    "name": "Docker",
+    "url": "//docker.com"
+  },
+  {
+    "name": "TypeScript",
+    "url": "//www.typescriptlang.org"
   }
 ]

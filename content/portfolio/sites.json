@@ -1,5 +1,28 @@
 [
   {
+    "slug": "ootracker",
+    "title": "Opera Omnia Tracker",
+    "tech": [
+      "TypeScript",
+      "React",
+      "Firebase",
+      "PostgresQL",
+      "GraphQL",
+      "Docker"
+    ],
+    "description": [
+      "Opera Omnia Tracker is an ongoing personal project I created to track progress in the game, Dissidia Final Fantasy: Opera Omnia.",
+      "Originally a Nuxt.js app, it has recently had a complete rewrite in React, and has new features being added regularly.",
+      "The main API for the back-end is created by the Hasura GraphQL Engine, using custom PostgresSQL functions to create additional GraphQL fields."
+    ],
+    "links": [
+      {
+        "linkType": "Site",
+        "linkUrl": "//ootracker.com"
+      }
+    ]
+  },
+  {
     "slug": "arabellascircus",
     "title": "Arabella's Circus",
     "tech": ["Liquid", "SCSS", "JS"],
@@ -11,22 +34,6 @@
       {
         "linkType": "Site",
         "linkUrl": "//www.arabellascircus.com"
-      }
-    ]
-  },
-  {
-    "slug": "ootracker",
-    "title": "OperaOmniaTracker",
-    "tech": ["Vue.js", "Nuxt.js", "PostgresQL", "GraphQL", "SCSS"],
-    "description": [
-      "OperaOmniaTracker is an ongoing personal project I created to track progress in the game, Dissidia Final Fantasy: Opera Omnia.",
-      "The frontend is a Nuxt.js app that is statically generated and hosted on Netlify.",
-      "The data for the app is stored in a PostgresQL database, with the Hasura GraphQL Engine being used to create an API."
-    ],
-    "links": [
-      {
-        "linkType": "Site",
-        "linkUrl": "//ootracker.com"
       }
     ]
   },

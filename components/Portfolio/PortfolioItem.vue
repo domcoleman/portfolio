@@ -137,6 +137,7 @@ export default PortfolioItem
     grid-row-start: var(--info-box-row-start);
     grid-column: var(--info-box-column-start) / var(--info-box-column-end);
     padding: 1rem 1rem 0.5rem;
+    white-space: nowrap;
     @include fluid-type(20px, 34px);
   }
 
